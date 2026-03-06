@@ -41,8 +41,8 @@ const Navbar = () => {
           {
             name: "PRIVATE CATERING",
             children: [
-              { name: "WEDDING CATERING", href: "/catering/private/wedding" },
               { name: "YACHT PARTY CATERING", href: "/catering/private/yacht" },
+              { name: "WEDDING CATERING", href: "/catering/private/wedding" },
             ],
           },
           { name: "CORPORATE CATERING", href: "/catering/corporate" },

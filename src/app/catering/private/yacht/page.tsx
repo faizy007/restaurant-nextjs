@@ -1,7 +1,8 @@
-import { ChevronRight } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
+import { ChevronRight } from "lucide-react";
 
-export default function Yacht() {
+export default function Yatch() {
   return (
     <div className="flex flex-col w-full font-sans">
       {/* Hero Section */}
