@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --gold: #C29B61;
+  --gold-hover: #a6834d;
+  --dark-bg: #1a1a1a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-gold: var(--gold);
+  --color-gold-hover: var(--gold-hover);
+  --color-dark-bg: var(--dark-bg);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-playfair-display);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+.gold-text {
+  color: var(--gold);
+}
+
+.gold-bg {
+  background-color: var(--gold);
+}
+
+.btn-reservation {
+  background-color: var(--gold);
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.btn-reservation:hover {
+  background-color: var(--gold-hover);
+}
+
+@keyframes subtle-zoom {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.05); }
+}
+
+.animate-subtle-zoom {
+  animation: subtle-zoom 20s infinite alternate ease-in-out;
+}
+
+.clip-path-hex {
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+.heading-arial-bold {
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-weight: 700 !important;
+}
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease-out forwards;
+}
